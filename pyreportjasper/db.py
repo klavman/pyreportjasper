@@ -29,6 +29,7 @@ class Db:
         self.JRLoader = jpype.JPackage('net').sf.jasperreports.engine.util.JRLoader
         self.StringEscapeUtils = jpype.JPackage('org').apache.commons.lang.StringEscapeUtils
         self.File = jpype.JPackage('java').io.File
+        self.URL = jpype.JPackage('java').net.URL
 
     def get_csv_datasource(self, config: Config):
         ds = self.JRCsvDataSource(self.get_data_file_input_stream(config), config.csvCharset)
@@ -53,6 +54,9 @@ class Db:
 
     def get_data_file_input_stream(self, config: Config):
         return self.JRLoader.getInputStream(self.File(config.dataFile))
+
+    def get_data_url_input_stream(self, config: Config):
+        return self.JRLoader.getInputStream(self.URL(config.dataURL))        
 
     def get_connection(self, config: Config):
         dbtype = config.dbType

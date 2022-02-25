@@ -20,6 +20,7 @@ class Config:
     input = None
     jdbcDir = None
     dataFile = None
+    dataURL = None
     csvFirstRow = None
     csvColumns = None
     csvRecordDel = None

@@ -85,6 +85,8 @@ class PyReportJasper:
                 self.config.xmlXpath = db_connection['xml_xpath']
             if 'data_file' in db_connection:
                 self.config.dataFile = db_connection['data_file']
+            if 'data_url' in db_connection:
+                self.config.dataURL = db_connection['data_url']                 
             if 'json_query' in db_connection:
                 self.config.jsonQuery = db_connection['json_query']
             if 'jsonql_query' in db_connection:
