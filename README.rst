@@ -6,7 +6,7 @@
 PyReportJasper
 ==============
 
-**This fork has been modified only to read json from url and return bytes.**
+**!!! THIS FORK HAS BEEN MODIFIED ONLY TO READ JSON FROM URL AND RETURN BYTES.**
 
 |pyversions|  |javaversions|  |jvm|  |platform|  |license|
 
