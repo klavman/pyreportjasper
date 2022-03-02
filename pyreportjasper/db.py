@@ -45,7 +45,10 @@ class Db:
         return jpype.JObject(ds, self.JRXmlDataSource)
 
     def get_json_datasource(self, config: Config):
-        ds = self.JsonDataSource(self.get_data_file_input_stream(config), config.jsonQuery)
+        if config.dataURL:
+            ds = self.JsonDataSource(self.get_data_url_input_stream(config), config.jsonQuery)
+        else:
+            ds = self.JsonDataSource(self.get_data_file_input_stream(config), config.jsonQuery)
         return jpype.JObject(ds, self.JsonDataSource)
 
     def get_jsonql_datasource(self, config: Config):

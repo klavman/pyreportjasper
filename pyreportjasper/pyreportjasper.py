@@ -145,6 +145,8 @@ class PyReportJasper:
             try:
                 report = Report(self.config, self.config.input)
                 report.fill()
+                # TODO: in other function process
+                return report
                 try:
                     formats = self.config.outputFormats
                     for f in formats:

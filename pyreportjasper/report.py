@@ -230,6 +230,9 @@ class Report:
     def export_pdf(self):
         self.JasperExportManager.exportReportToPdfStream(self.jasper_print, self.get_output_stream('.pdf'))
 
+    def export_pdf_bytes(self):
+        return self.JasperExportManager.exportReportToPdf(self.jasper_print)
+
     def export_rtf(self):
         exporter = self.JRRtfExporter()
         exporter.setExporterInput(self.SimpleExporterInput(self.jasper_print))
