@@ -6,6 +6,8 @@
 PyReportJasper
 ==============
 
+**This fork has been modified only to read json from url and return bytes.**
+
 |pyversions|  |javaversions|  |jvm|  |platform|  |license|
 
 This package aims to be a solution to compile and process JasperReports
